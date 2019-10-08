@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "confirm-dialog": {
+      "components": [
+        {
+          "entrypoint": "./lib/components/ConfirmDialog/index.js",
+          "manifest": "./src/components/ConfirmDialog/manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PzlSPFxComponentsStrings": "lib/loc/{locale}.js"
+  }
+}
