@@ -4,8 +4,7 @@ import { TextField } from 'office-ui-fabric-react/lib/TextField';
 import * as strings from 'PzlSPFxComponentsStrings';
 import * as React from 'react';
 
-
-export interface IConfirmActionDialogProps extends IDialogProps {
+export interface IConfirmDialogProps extends IDialogProps {
   /**
    * @todo Describe property
    */
@@ -27,7 +26,7 @@ export interface IConfirmActionDialogProps extends IDialogProps {
   commentMinLength?: number;
 }
 
-export interface IConfirmActionDialogState {
+export interface IConfirmDialogState {
   /**
    * @todo Describe property
    */
@@ -35,21 +34,22 @@ export interface IConfirmActionDialogState {
 }
 
 
-export class ConfirmDialog extends React.Component<IConfirmActionDialogProps, IConfirmActionDialogState>  {
-  public static defaultProps: Partial<IConfirmActionDialogProps> = { commentMinLength: 5 };
+export class ConfirmDialog extends React.Component<IConfirmDialogProps, IConfirmDialogState>  {
+  public static defaultProps: Partial<IConfirmDialogProps> = { commentMinLength: 5 };
 
-  constructor(props: IConfirmActionDialogProps) {
+  constructor(props: IConfirmDialogProps) {
     super(props);
     this.state = {};
   }
 
-  public render(): React.ReactElement<IConfirmActionDialogProps> {
+  public render(): React.ReactElement<IConfirmDialogProps> {
     return (
       <Dialog
         hidden={false}
         onDismiss={this.props.onDismiss}
         dialogContentProps={{ type: DialogType.normal, title: this.props.title, subText: this.props.subText }}
-        modalProps={{ isBlocking: false, ...this.props.modalProps }}>
+        modalProps={{ isBlocking: false, ...this.props.modalProps }}
+        containerClassName={this.props.containerClassName}>
         <div hidden={!this.props.commentEnabled}>
           <TextField
             placeholder={strings.CommentLabel}
@@ -78,4 +78,33 @@ export class ConfirmDialog extends React.Component<IConfirmActionDialogProps, IC
     if (this.state.comment && this.state.comment.length >= this.props.commentMinLength) return true;
     return false;
   }
+}
+
+/**
+ * Opens a confirm dialog
+ * 
+ * @param {string} title Dialog title
+ * @param {string} subText Dialog sub text
+ * @param {function} onConfirm On confirm action
+ * @param {string} onConfirmButtonText On confirm button text
+ * @param {React.Component} instance Instance of the component
+ * @param {string} stateProperty Property to set in the state
+ * @param {Partial<IConfirmActionDialogProps>} additionalProps Additional props 
+ */
+export function ConfirmAction(title: string, subText: string, onConfirm: (comment?: string) => Promise<void>, onConfirmButtonText: string, instance: React.Component, stateProperty: string = 'confirmActionProps', additionalProps: Partial<IConfirmDialogProps> = null) {
+  instance.setState({
+    [stateProperty]: {
+      title,
+      subText,
+      onDismiss: () => {
+        instance.setState({ confirmActionProps: null });
+      },
+      onConfirm: async (comment?: string) => {
+        await onConfirm(comment);
+        instance.setState({ confirmActionProps: null });
+      },
+      onConfirmButtonText,
+      ...(additionalProps || {}),
+    }
+  });
 }

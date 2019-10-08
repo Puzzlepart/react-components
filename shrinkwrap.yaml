@@ -2,7 +2,7 @@ dependencies:
   '@types/es6-promise': 0.0.33
   '@types/webpack-env': 1.13.1
 devDependencies:
-  '@microsoft/rush-stack-compiler-2.9': 0.7.16
+  '@microsoft/rush-stack-compiler-3.3': 0.3.5
   '@microsoft/sp-build-web': 1.9.1
   '@microsoft/sp-module-interfaces': 1.9.1
   '@microsoft/sp-tslint-rules': 1.9.1
@@ -26,29 +26,28 @@ packages:
     dev: true
     resolution:
       integrity: sha512-7dV4eu9gBxoM0dAnj/BCFDW9LFU0zvTrkq0ugM7pnHEgguOEeOz1so2ZghEdzviYzQEED0r4EAgpsBChKy1TRQ==
-  /@microsoft/api-extractor-model/7.1.3:
+  /@microsoft/api-extractor-model/7.5.1:
     dependencies:
-      '@microsoft/node-core-library': 3.13.0
-      '@microsoft/tsdoc': 0.12.9
-      '@types/node': 8.5.8
+      '@microsoft/node-core-library': 3.15.1
+      '@microsoft/tsdoc': 0.12.14
     dev: true
     resolution:
-      integrity: sha512-DjagaoMFY1XyLjjo/x4lp7LoyjyMg4ntDY5+RE8g2zvt61m2dKm9CtxW0lxaQI4Xilw+n+Z4exjcGaQJeRcMyw==
-  /@microsoft/api-extractor/7.1.8:
+      integrity: sha512-qzgmJeoqpJqYDS1yj9YTPdd/+9OWGFwfzGFyr6kVarexomdPSltcoQYIS5JnrB/RFNeUgTNUlwn5mYdyp2Xv6A==
+  /@microsoft/api-extractor/7.5.0:
     dependencies:
-      '@microsoft/api-extractor-model': 7.1.3
-      '@microsoft/node-core-library': 3.13.0
-      '@microsoft/ts-command-line': 4.2.5
-      '@microsoft/tsdoc': 0.12.9
+      '@microsoft/api-extractor-model': 7.5.1
+      '@microsoft/node-core-library': 3.15.1
+      '@microsoft/ts-command-line': 4.3.2
+      '@microsoft/tsdoc': 0.12.14
       colors: 1.2.5
       lodash: 4.17.15
       resolve: 1.8.1
       source-map: 0.6.1
-      typescript: 3.4.5
+      typescript: 3.5.3
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-7fcGbnOp7bmQe4p1b123K6gJ/qyaLWhufSt5OF3DMMK1JbmdfEGWf7AwyFFSS4QQzPvSxqs8Woehye4Ytf1uAA==
+      integrity: sha512-CxKNZFD9TRo/y8MQzlk4z/Z5jPCaQsDq7ON9baE544CKnmF4sNlmoS9ydkt0As3v6OYKjp50d2N4NAmZoOVXzg==
   /@microsoft/decorators/1.9.1:
     dependencies:
       tslib: 1.9.3
@@ -203,6 +202,16 @@ packages:
     dev: true
     resolution:
       integrity: sha512-mnsL/1ikVWHl8sPNssavaAgtUaIM3hkQ8zeySuApU5dNmsMPzovJPfx9m5JGiMvs1v5QNAIVeiS9jnWwe/7anw==
+  /@microsoft/node-core-library/3.15.1:
+    dependencies:
+      '@types/node': 8.10.54
+      colors: 1.2.5
+      fs-extra: 7.0.1
+      jju: 1.4.0
+      z-schema: 3.18.4
+    dev: true
+    resolution:
+      integrity: sha512-fUrcgu+w40k2GW8fiOUFby7jaKAAuDKaTrQuFQ3j+0Pg3ANnJ2uKtVf3bgFiNu+uVKpwVtLo4CPS8TwFduJRow==
   /@microsoft/office-ui-fabric-react-bundle/1.9.1/@types!react-dom@16.8.3:
     dependencies:
       '@types/react': 16.8.8
@@ -255,18 +264,18 @@ packages:
       node: '>=5.6.0'
     resolution:
       integrity: sha512-Ytjvy4TJ9w1ryokAN5BKe3R3vLx2jAkUal07EwAu1Kuv65pML/FZj26OPHesOq01+ly/PEdZeOwnBFme7rZCiA==
-  /@microsoft/rush-stack-compiler-2.9/0.7.16:
+  /@microsoft/rush-stack-compiler-3.3/0.3.5:
     dependencies:
-      '@microsoft/api-extractor': 7.1.8
-      '@microsoft/node-core-library': 3.13.0
-      '@types/node': 8.5.8
-      tslint: /tslint/5.12.1/typescript@2.9.2
-      tslint-microsoft-contrib: /tslint-microsoft-contrib/5.2.1/tslint@5.12.1+typescript@2.9.2
-      typescript: 2.9.2
+      '@microsoft/api-extractor': 7.5.0
+      '@microsoft/node-core-library': 3.15.1
+      '@types/node': 8.10.54
+      tslint: /tslint/5.12.1/typescript@3.3.4000
+      tslint-microsoft-contrib: /tslint-microsoft-contrib/5.2.1/e3ee0fc47f74ced40450794f5ef5a1fb
+      typescript: 3.3.4000
     dev: true
     hasBin: true
     resolution:
-      integrity: sha512-a3sHfyEYj1aPgd87DYDX1InyP7YMYGRg6w62Ems0sLM67gUni6JGqKwLjqPsfFe9pKoT9hXvv1ltkTvxqh629g==
+      integrity: sha512-c8727bgcG5VY1bSW2Cvp6EzdMBcF3gCpC6VcBHXtKWHzGJuRO2eEDE28knUqaKqDWIJDVvejjMb25M9RIeLW6w==
   /@microsoft/set-webpack-public-path-plugin/2.1.113:
     dependencies:
       '@types/node': 8.5.8
@@ -626,15 +635,6 @@ packages:
     dev: true
     resolution:
       integrity: sha512-O10tpakpm+NyClJOW4eCaidlDI5sW9b5oRGQiUA0WqFG6GQt1HEz/KFsCN+ebaFgjstx+trZzYIuYdpK98XsMQ==
-  /@microsoft/ts-command-line/4.2.5:
-    dependencies:
-      '@types/argparse': 1.0.33
-      '@types/node': 8.5.8
-      argparse: 1.0.10
-      colors: 1.2.5
-    dev: true
-    resolution:
-      integrity: sha512-QyTfbfpx6o+1cnjx5GubqKSRMDxBBMXABSa8wmqRa/A1K99FEBZfLIO6GmaY0s7rNYEchfR1VcVS/hV2VW+6hw==
   /@microsoft/ts-command-line/4.2.6:
     dependencies:
       '@types/argparse': 1.0.33
@@ -644,10 +644,18 @@ packages:
     dev: true
     resolution:
       integrity: sha512-GFLPg9Z5yiNca3di/V6Zt3tAvj1de9EK0eL88tE+1eckQSH405UQcm7D+H8LbEhRpqpG+ZqN9LXCAEw4L5uchg==
-  /@microsoft/tsdoc/0.12.9:
+  /@microsoft/ts-command-line/4.3.2:
+    dependencies:
+      '@types/argparse': 1.0.33
+      argparse: 1.0.10
+      colors: 1.2.5
     dev: true
     resolution:
-      integrity: sha512-sDhulvuVk65eMppYOE6fr6mMI6RUqs53KUg9deYzNCBpP+2FhR0OFB5innEfdtSedk0LK+1Ppu6MxkfiNjS/Cw==
+      integrity: sha512-2QeyilabCe6IpBylPXuY6dCA1S9ym3Ii0zakXVPpyfjSj1NesnyuUeuh6e8kyIqzqJ+3LYjfPG63XzUBtwGqqw==
+  /@microsoft/tsdoc/0.12.14:
+    dev: true
+    resolution:
+      integrity: sha512-518yewjSga1jLdiLrcmpMFlaba5P+50b0TWNFUpC+SL9Yzf0kMi57qw+bMl+rQ08cGqH1vLx4eg9YFUbZXgZ0Q==
   /@pnpm/link-bins/1.0.3/@pnpm!logger@1.0.2:
     dependencies:
       '@pnpm/logger': 1.0.2
@@ -840,6 +848,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-Otxmr2rrZLKRYIybtdG/sgeO+tHY20GxeDjcGmUnmmlCWyEnv2a2x1ZXBo3BTec4OiTXMQCiazB8NMBf0iRlFw==
+  /@types/node/8.10.54:
+    dev: true
+    resolution:
+      integrity: sha512-kaYyLYf6ICn6/isAyD4K1MyWWd5Q3JgH6bnMN089LUx88+s4W8GvK9Q6JMBVu5vsFFp7pMdSxdKmlBXwH/VFRg==
   /@types/node/8.5.8:
     dev: true
     resolution:
@@ -10091,11 +10103,11 @@ packages:
     dev: true
     resolution:
       integrity: sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
-  /tslint-microsoft-contrib/5.2.1/tslint@5.12.1+typescript@2.9.2:
+  /tslint-microsoft-contrib/5.2.1/e3ee0fc47f74ced40450794f5ef5a1fb:
     dependencies:
-      tslint: /tslint/5.12.1/typescript@2.9.2
-      tsutils: /tsutils/2.28.0/typescript@2.9.2
-      typescript: 2.9.2
+      tslint: /tslint/5.12.1/typescript@3.3.4000
+      tsutils: /tsutils/2.28.0/typescript@3.3.4000
+      typescript: 3.3.4000
     dev: true
     id: registry.npmjs.org/tslint-microsoft-contrib/5.2.1
     peerDependencies:
@@ -10114,7 +10126,7 @@ packages:
       typescript: ^2.1.0 || ^3.0.0
     resolution:
       integrity: sha512-PDYjvpo0gN9IfMULwKk0KpVOPMhU6cNoT9VwCOLeDl/QS8v8W2yspRpFFuUS7/c5EIH/n8ApMi8TxJAz1tfFUA==
-  /tslint/5.12.1/typescript@2.9.2:
+  /tslint/5.12.1/typescript@3.3.4000:
     dependencies:
       babel-code-frame: 6.26.0
       builtin-modules: 1.1.1
@@ -10127,8 +10139,8 @@ packages:
       resolve: 1.12.0
       semver: 5.7.1
       tslib: 1.10.0
-      tsutils: /tsutils/2.29.0/typescript@2.9.2
-      typescript: 2.9.2
+      tsutils: /tsutils/2.29.0/typescript@3.3.4000
+      typescript: 3.3.4000
     dev: true
     engines:
       node: '>=4.8.0'
@@ -10176,10 +10188,10 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-bh5nAtW0tuhvOJnx1GLRn5ScraRLICGyJV5wJhtRWOLsxW70Kk5tZtpK3O/hW6LDnqKS9mlUMPZj9fEMJ0gxqA==
-  /tsutils/2.28.0/typescript@2.9.2:
+  /tsutils/2.28.0/typescript@3.3.4000:
     dependencies:
       tslib: 1.10.0
-      typescript: 2.9.2
+      typescript: 3.3.4000
     dev: true
     id: registry.npmjs.org/tsutils/2.28.0
     peerDependencies:
@@ -10194,10 +10206,10 @@ packages:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     resolution:
       integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
-  /tsutils/2.29.0/typescript@2.9.2:
+  /tsutils/2.29.0/typescript@3.3.4000:
     dependencies:
       tslib: 1.10.0
-      typescript: 2.9.2
+      typescript: 3.3.4000
     dev: true
     id: registry.npmjs.org/tsutils/2.29.0
     peerDependencies:
@@ -10243,20 +10255,20 @@ packages:
     dev: true
     resolution:
       integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
-  /typescript/2.9.2:
+  /typescript/3.3.4000:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-Gr4p6nFNaoufRIY4NMdpQRNmgxVIGMs4Fcu/ujdYk3nAZqk7supzBE9idmvfZIlH/Cuj//dvi+019qEue9lV0w==
-  /typescript/3.4.5:
+      integrity: sha512-jjOcCZvpkl2+z7JFn0yBOoLQyLoIkNZAs/fYJkUG6VKy6zLPHJGfQJYFHzibB6GJaF/8QrcECtlQ5cpvRHSMEA==
+  /typescript/3.5.3:
     dev: true
     engines:
       node: '>=4.2.0'
     hasBin: true
     resolution:
-      integrity: sha512-YycBxUb49UUhdNMU5aJ7z5Ej2XGmaIBL0x34vZ82fn3hGvD+bgrMrVDpatgz2f7YxUMJxMkbWxJZeAvDxVe7Vw==
+      integrity: sha512-ACzBtm/PhXBDId6a6sDJfroT2pOWt/oOnk4/dElG5G33ZL776N3Y6/6bKZJBFpd+b05F3Ct9qDjMeJmRWtE2/g==
   /ua-parser-js/0.7.20:
     dev: true
     resolution:
@@ -11067,7 +11079,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  '@microsoft/rush-stack-compiler-2.9': 0.7.16
+  '@microsoft/rush-stack-compiler-3.3': ^0.3.5
   '@microsoft/sp-build-web': 1.9.1
   '@microsoft/sp-module-interfaces': 1.9.1
   '@microsoft/sp-tslint-rules': 1.9.1
